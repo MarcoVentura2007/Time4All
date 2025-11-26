@@ -27,7 +27,7 @@
   </div>
 
   <div class="login-container">
-    <form action="index.html" method="get" class="login-form">
+    <form class="login-form" id="login-form">
       <h2 id="titolo-login">LOGIN</h2>
       <div class="input-wrap">
         <input id="username" class="colored-input" type="text" autocomplete="off" name="username" placeholder="Username" required>
@@ -37,14 +37,14 @@
         <img draggable="false" id="eyeicon" src="immagini/view.png" style="cursor:pointer;" />
       </div>
       <button class="login-button">Accedi</button>
-      <!-- <div id="message">❌Credenziali non messe</div> -->
+      <div id="message">❌Credenziali non messe</div>
   </div>
 
     <script>
 
-    // const form = document.getElementById('login-form');
-    // const messageDiv = document.getElementById('message');
-    // messageDiv.style.opacity = "0";
+    const form = document.getElementById('login-form');
+    const messageDiv = document.getElementById('message');
+    messageDiv.style.opacity = "0";
     const eyeicon = document.getElementById('eyeicon');
     const passwordInput = document.getElementById('password');
 
@@ -60,7 +60,6 @@
     };
 
     // login/registrazione
-    /* 
     form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
@@ -106,7 +105,6 @@
         console.error(err);
       }
     });
-    */
 
     </script>
 
