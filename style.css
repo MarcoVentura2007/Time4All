@@ -18,6 +18,10 @@ body, html{
     color: rgb(255, 255, 255);
     text-shadow: 0 0 0.1rem black;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 @keyframes fadeInAnimation {
     0% {
         opacity: 0;
@@ -346,4 +350,73 @@ input::placeholder {
 .column.scelta img{
     height: 140px;
     padding: 50px;
+}
+
+/* Container Swiper */
+.swiper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 40px 0;
+}
+
+/* Card */
+.swiper-slide.card-item {
+    width: 330px;
+    height: 380px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Immagini */
+.card-item img {
+    width: 98%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    margin: 30px auto;
+}
+
+/* Titolo */
+.card-item h3 {
+    text-align: center;
+    padding: 0.1rem 0 1.2rem 0;
+    font-family: 'bodyfont', serif;
+    font-size: 1.3rem;
+    margin: 0;
+    color: #2b2b2b;
+}
+
+/* Coverflow effect */
+.swiper-slide {
+    opacity: 0.8;          /* slide laterali meno visibili */
+    transform: scale(0.8); /* leggermente più piccoli */
+}
+
+.swiper-slide-active {
+    opacity: 1;             /* slide centrale visibile */
+    transform: scale(1);    
+}
+
+/* Frecce */
+.swiper-button-next,
+.swiper-button-prev {
+    color: #3e021f;
+    background: rgba(255,255,255,0.9);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
